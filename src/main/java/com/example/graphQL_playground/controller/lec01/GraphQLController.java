@@ -1,4 +1,4 @@
-package com.example.graphQL_playground.controller;
+package com.example.graphQL_playground.controller.lec01;
 
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
