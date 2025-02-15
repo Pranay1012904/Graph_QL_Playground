@@ -1,0 +1,15 @@
+type Query{
+    #use this to fetch all customers
+    customers:[Customer]! #it can be an empty list, but it won't be null
+    #To fetch customer by ID
+    customerById(id: ID!): Customer
+    #To find customers by name
+    CustomersByName(name: String!):[Customer]
+}
+
+type Customer{
+    id: ID
+    name: String
+    age: Int
+    city: String
+}
