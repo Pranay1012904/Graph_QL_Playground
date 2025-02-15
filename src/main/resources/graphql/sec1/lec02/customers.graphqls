@@ -6,7 +6,13 @@ type Query{
     #To find customers by name
     CustomersByName(name: String!):[Customer]
     #filter customer by age range
-    findCustomerByAgeRange(minAge:Int!, maxAge:Int!):[Customer]
+   # findCustomerByAgeRange(minAge:Int!, maxAge:Int!):[Customer]  we will use a special type "input for this".
+    findCustomerByAgeRange(filter: AgeRangeFilter!):[Customer]
+}
+
+input AgeRangeFilter{
+    minAge: Int!
+    maxAge: Int!
 }
 
 type Customer{

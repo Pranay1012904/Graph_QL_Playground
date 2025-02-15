@@ -31,7 +31,7 @@ public class CustomerController {
     }
 
     @QueryMapping
-    public  List<CustomerEntity> findCustomerByAgeRange(@Argument Integer minAge,@Argument Integer maxAge){
-        return customerService.findCustomerByAgeRange(minAge, maxAge);
+    public  List<CustomerEntity> findCustomerByAgeRange(@Argument AgeRangeFilter filter){
+        return customerService.findCustomerByAgeRange(filter.getMinAge(), filter.getMaxAge());
     }
 }
