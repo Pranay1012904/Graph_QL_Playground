@@ -1,4 +1,5 @@
 type Query{
     sayHello: String
     passArgs(age:Int!): String
+    random: Int!
 }
