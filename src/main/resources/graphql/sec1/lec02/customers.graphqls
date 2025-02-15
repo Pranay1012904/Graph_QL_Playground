@@ -2,9 +2,11 @@ type Query{
     #use this to fetch all customers
     customers:[Customer]! #it can be an empty list, but it won't be null
     #To fetch customer by ID
-    customerById(id: ID!): Customer
+    customerById(id: ID!): [Customer]
     #To find customers by name
     CustomersByName(name: String!):[Customer]
+    #filter customer by age range
+    findCustomerByAgeRange(minAge:Int!, maxAge:Int!):[Customer]
 }
 
 type Customer{
