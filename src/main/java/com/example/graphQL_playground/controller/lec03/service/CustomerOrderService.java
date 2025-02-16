@@ -27,6 +27,8 @@ public class CustomerOrderService {
        if(dataMap.containsKey(name)){
           return dataMap.get(name);
        }
-        return null;
+        return List.of(
+                OrderEntity.create(UUID.randomUUID(), "NO ORDERS")
+        );
     }
 }
