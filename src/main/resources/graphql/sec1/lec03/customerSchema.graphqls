@@ -7,7 +7,7 @@ type Customer{#use this to fetch orders in the object
     name: String
     age: Int
     city: String
-    order:[CustomerOrder]
+    order(limit: Int!):[CustomerOrder]
 }
 
 type CustomerOrder{
